@@ -17,9 +17,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "typeRoots": [
+      "src/typings",
+      "node_modules/@types"
+    ]
   },
   "include": [
-    "src"
+    "src",
+    "node_modules/jest-dom",
+    "setupTests.ts"
   ]
 }
