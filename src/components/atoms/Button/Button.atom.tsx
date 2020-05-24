@@ -4,7 +4,7 @@
  *                                                                                      */
 // ========================================================================================
 // * Lib
-import React from 'react'
+import React, { useRef, useLayoutEffect } from 'react'
 
 // * Utils
 import { gifs, images } from '@constants'
@@ -13,19 +13,32 @@ import { gifs, images } from '@constants'
 import './styles.scss'
 
 // * Display/UI
+type Props = {
+   onPress?(): void
+}
+const Button = (props: Props) => {
+   const { onPress } = props
+   const heartCheckbox = useRef<HTMLInputElement>(null)
 
-const Button = () => {
    return (
       <div className="heart-button">
-         <input id="click" type="checkbox" />
-         <label>
-            <div className="favourite">
-               <div className="favourite_heart">
-                  <div className="favourite_heart__left"></div>
-                  <div className="favourite_heart__right"></div>
+         <input
+            ref={heartCheckbox}
+            id="click"
+            className="heart-button__checkbox"
+            type="checkbox"
+            onClick={onPress}
+         />
+         <label className="heart-button__label label" htmlFor="click">
+            <div className="heart-button__favourite favourite">
+               <div className="heart-button__favourite-heart favourite_heart">
+                  <div className="heart-button__favourite-heart-left favourite_heart__left"></div>
+                  <div className="heart-button__favourite-heart-right favourite_heart__right"></div>
                </div>
-               <div className="favourite_text">
-                  <span>Feliz Cumpleaños</span>
+               <div className="heart-button__favourite-text favourite_text">
+                  <span className="heart-button__text-span">
+                     Feliz Cumpleaños
+                  </span>
                </div>
             </div>
          </label>

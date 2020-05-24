@@ -65,166 +65,174 @@ $hl: $hr - ($hr * 2);
    width: 100px;
    height: 100px;
    position: relative;
-}
-input {
-   display: none;
-}
-input[type='checkbox']:checked + label > .favourite .favourite_text {
-   top: 7px;
-   opacity: 0;
-   transition-property: top, opacity;
-   transition-duration: 0.3s;
-   transition-delay: 0s;
-}
-input[type='checkbox']:checked + label > .favourite {
-   width: 20px;
-   transition-delay: 0.2s;
-   box-shadow: 0px 0px 0px 0px transparent;
-}
-
-input[type='checkbox']:checked
-   + label
-   > .favourite
-   .favourite_heart
-   .favourite_heart__left {
-   width: 6px;
-   height: 12px;
-   left: 3px;
-   top: 0px;
-   margin-top: 8px;
-   transition-property: width, height, left, top, margin-top;
-   transition-duration: 0.2s;
-   transition-delay: 1.2s;
-}
-input[type='checkbox']:checked
-   + label
-   > .favourite
-   .favourite_heart
-   .favourite_heart__right {
-   width: 6px;
-   transition-property: width, height, left, margin-top;
-   transition-duration: 0.2s;
-   transition-delay: 1.2s;
-   height: 17px;
-   left: 10px;
-   margin-top: 4px;
-}
-
-.favourite {
-   border-radius: 100px;
-   width: 20px;
-   overflow: hidden;
-   height: 20px;
-   cursor: pointer;
-   @extend %center;
-   -webkit-animation: pop 0.6s;
-   padding: 20px;
-   box-shadow: 0px 0px 0px 3px white;
-   color: white;
-   transition-property: width;
-   transition-duration: 0.2s, 0.2s;
-   -webkit-transition-timing-function: cubic-bezier(0.38, -0.35, 0.265, 1.15);
-   &:hover {
-      width: 160px;
+   // input[type='checkbox']:checked {
+   //    &.heart-button__checkbox {
+   //       .heart-button__favourite {
+   //          width: 20px;
+   //          transition-delay: 0.2s;
+   //          box-shadow: 0px 0px 0px 0px transparent;
+   //       }
+   //       .heart-button__favourite-heart-left {
+   //          width: 6px;
+   //          height: 12px;
+   //          left: 3px;
+   //          top: 0px;
+   //          margin-top: 8px;
+   //          transition-property: width, height, left, top, margin-top;
+   //          transition-duration: 0.2s;
+   //          transition-delay: 1.2s;
+   //       }
+   //       .heart-button__favourite-heart-right {
+   //          width: 6px;
+   //          transition-property: width, height, left, margin-top;
+   //          transition-duration: 0.2s;
+   //          transition-delay: 1.2s;
+   //          height: 17px;
+   //          left: 10px;
+   //          margin-top: 4px;
+   //       }
+   //       .heart-button__favourite-text {
+   //          top: 7px;
+   //          opacity: 0;
+   //          transition-property: top, opacity;
+   //          transition-duration: 0.3s;
+   //          transition-delay: 0s;
+   //       }
+   //    }
+   // }
+   &__checkbox {
+      display: none;
+      // &:checked {
+      //    .heart-button__favourite {
+      //       width: 20px;
+      //       transition-delay: 0.2s;
+      //       box-shadow: 0px 0px 0px 0px transparent;
+      //    }
+      //    .heart-button__favourite-heart-left {
+      //       width: 6px;
+      //       height: 12px;
+      //       left: 3px;
+      //       top: 0px;
+      //       margin-top: 8px;
+      //       transition-property: width, height, left, top, margin-top;
+      //       transition-duration: 0.2s;
+      //       transition-delay: 1.2s;
+      //    }
+      //    .heart-button__favourite-heart-right {
+      //       width: 6px;
+      //       transition-property: width, height, left, margin-top;
+      //       transition-duration: 0.2s;
+      //       transition-delay: 1.2s;
+      //       height: 17px;
+      //       left: 10px;
+      //       margin-top: 4px;
+      //    }
+      //    .heart-button__favourite-text {
+      //       top: 7px;
+      //       opacity: 0;
+      //       transition-property: top, opacity;
+      //       transition-duration: 0.3s;
+      //       transition-delay: 0s;
+      //    }
+      // }
+   }
+   &__favourite {
+      border-radius: 100px;
+      width: 20px;
+      overflow: hidden;
+      height: 20px;
+      cursor: pointer;
+      @extend %center;
+      -webkit-animation: pop 0.6s;
+      padding: 20px;
       box-shadow: 0px 0px 0px 3px white;
-      transform: translateX(-25%);
+      color: white;
+      transition: 0.2s width, 0.2s transform ease-in;
+      &:hover {
+         width: 160px;
+         box-shadow: 0px 0px 0px 3px white;
+         transform: translateX(-25%);
+         .heart-button__favourite-heart-left {
+            transform: scale(1.1) rotate(-45deg);
+            transition-property: transform;
+            transition-duration: 0.1s;
+         }
+         .heart-button__favourite-text {
+            top: 1px;
+            opacity: 1;
+            transition-property: top, opacity;
+            transition-duration: 0.3s;
+            transition-delay: 0.3s;
+         }
+         .heart-button__favourite-heart-right {
+            transform: scale(1.1) rotate(45deg);
+            transition-property: transform;
+            transition-duration: 0.1s;
+         }
+      }
    }
-   &:hover > .favourite_heart .favourite_heart__left {
-      transform: scale(1.1) rotate(-45deg);
-      transition-property: transform;
-      transition-duration: 0.1s;
-      //-webkit-animation:heartbeat_l 1s infinite;
-   }
-   &:hover > .favourite_text {
-      top: 1px;
-      opacity: 1;
-      transition-property: top, opacity;
-      transition-duration: 0.3s;
-      transition-delay: 0.3s;
-   }
-   &:hover > .favourite_heart .favourite_heart__right {
-      transform: scale(1.1) rotate(45deg);
-      transition-property: transform;
-      transition-duration: 0.1s;
-   }
-   &_text {
+   &__favourite-text {
       margin-left: 33px;
       top: 7px;
       opacity: 0;
       position: relative;
-      span {
-         color: white;
-         text-transform: uppercase;
-         font-weight: normal;
-         font-size: 12px;
-      }
    }
-   &_heart {
+   &__text-span {
+      color: white;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 12px;
+   }
+   &__favourite-heart {
       position: absolute;
       top: 19px;
       left: 20px;
       margin-right: 10px;
-      &__left {
-         background: $heart-color;
-         width: $heart-width;
-         height: $heart-height;
-         transform: rotate($hl);
-         position: absolute;
-         left: 0px;
-         border-top-right-radius: 30px;
-         border-top-left-radius: 30px;
+   }
+   .heart-button__favourite-heart-left {
+      background: $heart-color;
+      width: $heart-width;
+      height: $heart-height;
+      transform: rotate($hl);
+      position: absolute;
+      left: 0px;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+   }
+   .heart-button__favourite-heart-right {
+      background: $heart-color;
+      width: $heart-width;
+      height: $heart-height;
+      transform: rotate($hr);
+      position: absolute;
+      left: 8px;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+   }
+   @keyframes pop {
+      0% {
+         transform: scale(0);
       }
-      &__right {
-         background: $heart-color;
-         width: $heart-width;
-         height: $heart-height;
-         transform: rotate($hr);
-         position: absolute;
-         left: 8px;
-         border-top-right-radius: 30px;
-         border-top-left-radius: 30px;
+      50% {
+         transform: scale(1.05);
+      }
+      100% {
+         transform: scale(1);
       }
    }
-}
-input[type='checkbox']:not(:checked) + label > .favourite {
-   transition: 0.2s width, 0.2s transform ease-in;
-   box-shadow: 0px 0px 0px 3px white;
-}
-/* Animations */
 
-// Any animations here
-
-@keyframes pop {
-   0% {
-      transform: scale(0);
-   }
-   50% {
-      transform: scale(1.05);
-   }
-   100% {
-      transform: scale(1);
-   }
-}
-
-@keyframes heartbeat_l {
-   0% {
-      transform: scale(1.1);
-      transform: rotate(-45deg);
-   }
-   50% {
-      transform: scale(0.7);
-      transform: rotate(-45deg);
-   }
-   100% {
-      transform: scale(1.1);
-      transform: rotate(-45deg);
-   }
-}
-/* Media quizzles */
-
-@media only screen and (max-height: 330px) {
-   // Checks how the pen will look in featured iframe
-   body {
-      //  background:Red;
+   @keyframes heartbeat_l {
+      0% {
+         transform: scale(1.1);
+         transform: rotate(-45deg);
+      }
+      50% {
+         transform: scale(0.7);
+         transform: rotate(-45deg);
+      }
+      100% {
+         transform: scale(1.1);
+         transform: rotate(-45deg);
+      }
    }
 }
