@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,11 +21,13 @@
     "typeRoots": [
       "src/typings",
       "node_modules/@types"
-    ]
+    ],
+    "baseUrl": "."
   },
   "include": [
     "src",
     "node_modules/jest-dom",
     "setupTests.ts"
-  ]
+  ],
+  "extends": "./base-tsconfig.json"
 }

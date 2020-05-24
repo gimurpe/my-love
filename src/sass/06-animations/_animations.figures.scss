@@ -9,178 +9,52 @@ $heart-height: 30px;
 $heart-right: -17px;
 $heart-left: -17px;
 .heart {
-  position: absolute;
-  display: block;
-  width: $heart-width;
-  height: $heart-height;
-  background: #e74c3c;
-  border-radius: 0 0 0 0;
-  transform: rotate(-45deg);
-  animation: pulse 1s infinite;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 50px;
+   position: absolute;
+   display: block;
+   width: $heart-width;
+   height: $heart-height;
+   background: #e74c3c;
+   border-radius: 0 0 0 0;
+   transform: rotate(-45deg);
+   animation: pulse 1s infinite;
+   margin: auto;
+   left: 0;
+   right: 0;
+   bottom: 50px;
 }
 .heart::before,
 .heart::after {
-  position: absolute;
-  content: '';
-  width: $heart-width;
-  height: $heart-height;
-  background: #e74c3c;
-  border-radius: 50%;
+   position: absolute;
+   content: '';
+   width: $heart-width;
+   height: $heart-height;
+   background: #e74c3c;
+   border-radius: 50%;
 }
 .heart::before {
-  top: $heart-left;
-  left: 0;
+   top: $heart-left;
+   left: 0;
 }
 .heart::after {
-  top: 0;
-  right: $heart-right;
+   top: 0;
+   right: $heart-right;
 }
 @keyframes pulse {
-  0%,
-  20% {
-    transform: rotate(-45deg) scale(1);
-  }
-  30% {
-    transform: rotate(-45deg) scale(1.2);
-  }
-  50% {
-    transform: rotate(-45deg) scale(1);
-  }
-  60% {
-    transform: rotate(-45deg) scale(1.1);
-  }
-  70%,
-  100% {
-    transform: rotate(-45deg) scale(1);
-  }
-}
-
-//= =======================================================================================
-/*                                                                                      *
- * FIGURE: ENVELOPE                                                                     *
- *                                                                                      */
-//= =======================================================================================
-
-@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
-/*----Variables ----*/
-$white: #fefefe;
-$envelope-color-1: #f6cfca;
-$envelope-color-2: #f4dad7;
-$envelope-color-3: #fbe8e5;
-$envelope-width: 550px;
-$envelope-height: 280px;
-$paper-width: 500px;
-$paper-height: 240px;
-$triangle-height: calc(#{$envelope-height} / 2);
-$triangle-width: calc(#{$envelope-width} / 2);
-$paper-border-radius: 3px;
-$bezier: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-/*----Abstract Classes ----*/
-%absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-%box-1 {
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
-}
-%box-2 {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-/*----Components ----*/
-.design {
-  @extend %absolute-center;
-}
-
-.envelope {
-  @extend %box-1;
-  background: $envelope-color-1;
-  width: $envelope-width;
-  height: $envelope-height;
-
-  &:hover {
-    cursor: pointer;
-
-    .cover .top {
-      transform: scaleY(-1);
-      transform-origin: top;
-      z-index: 0;
-    }
-
-    .paper {
-      transform: translate(-50%, -225px);
-      transition: $bezier;
-    }
-  }
-
-  .paper {
-    @extend %absolute-center, %box-2;
-    width: $paper-width;
-    height: $paper-height;
-    background: #ffffff;
-    border-radius: $paper-border-radius;
-
-    .message {
-      @extend %absolute-center;
-      font-family: 'Sacramento', cursive;
-      text-align: center;
-      font-size: 36px;
-    }
-  }
-
-  .cover {
-    position: relative;
-
-    .top,
-    .left,
-    .right,
-    .bottom {
-      position: absolute;
-      width: $envelope-width;
-      z-index: 1;
-    }
-
-    .left,
-    .right {
-      background: $envelope-color-2;
-      width: $triangle-width;
-      height: $envelope-height;
-    }
-
-    .top {
-      height: calc(#{$envelope-height} - 90px);
-      background: $envelope-color-1;
-      -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-      clip-path: polygon(0 0, 50% 100%, 100% 0);
-    }
-
-    .left {
-      left: 0;
-      -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
-      clip-path: polygon(0 0, 0 100%, 100% 50%);
-    }
-
-    .right {
-      right: 0;
-      -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%);
-      clip-path: polygon(0 50%, 100% 0, 100% 100%);
-    }
-
-    .bottom {
-      top: $triangle-height;
-      height: $triangle-height;
-      background: $envelope-color-3;
-      -webkit-clip-path: polygon(0 100%, 50% 0%, 100% 100%);
-      clip-path: polygon(0 100%, 50% 0%, 100% 100%);
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-  }
+   0%,
+   20% {
+      transform: rotate(-45deg) scale(1);
+   }
+   30% {
+      transform: rotate(-45deg) scale(1.2);
+   }
+   50% {
+      transform: rotate(-45deg) scale(1);
+   }
+   60% {
+      transform: rotate(-45deg) scale(1.1);
+   }
+   70%,
+   100% {
+      transform: rotate(-45deg) scale(1);
+   }
 }

@@ -1,0 +1,18 @@
+{
+   "presets": ["@babel/preset-typescript"],
+   "plugins": [
+      [
+         "module-resolver",
+         {
+            "root": ["./src"],
+            "extensions": [".js", ".ts", ".tsx", ".json"],
+            "cwd": "babelrc",
+            "alias": {
+               "@assets": "./src/assets",
+               "@atoms": "./src/components/atoms/index.ts",
+               "@constants": "./src/constants/index.ts"
+            }
+         }
+      ]
+   ]
+}

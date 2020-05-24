@@ -1,7 +1,7 @@
-import loveReducer from './love';
+import loveReducer from './love'
 
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
 export default combineReducers({
   loveReducer,
-});
+})

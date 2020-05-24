@@ -1,0 +1,10 @@
+{
+   "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+         "@atoms": ["src/components/atoms/index.ts"],
+         "@assets/*": ["src/assets/*"],
+         "@constants": ["src/constants/index.ts"]
+      }
+   }
+}

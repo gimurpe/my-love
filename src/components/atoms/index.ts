@@ -1,7 +1,4 @@
-import Envelope from './Figures/Envelope.atom';
+import Envelope from './Envelope/Envelope.atom'
+import Button from './Button/Button.atom'
 
-export { Envelope };
-
-// export default {
-//   Envelope,
-// };
+export { Envelope, Button }

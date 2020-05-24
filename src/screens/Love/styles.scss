@@ -1,7 +1,79 @@
 .love {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   .design {
+      z-index: 1;
+   }
+   &__envelop-container {
+   }
+   &__heart-button {
+   }
+   &__background {
+      position: fixed;
+   }
+   &__nori-stamp {
+      position: absolute;
+      z-index: 2;
+      top: 80px;
+   }
+   &__heart-stamp {
+      position: absolute;
+      z-index: 2;
+      width: 100px;
+      height: 130px;
+      left: 30px;
+      top: 150px;
+   }
+   &__balloons-couple {
+      width: 130px;
+      height: 120px;
+      z-index: 2;
+      top: 0;
+      top: 0px;
+      right: 0px;
+      margin: auto;
+      position: absolute;
+   }
+   &__nori {
+      width: 50px;
+      height: 72px;
+      background-image: url(http://i.imgur.com/xtk0SCC.png);
+      animation: moveX 1s steps(10) infinite;
+      position: absolute;
+      z-index: 2;
+      @keyframes moveX {
+         from {
+            background-position-x: 0px;
+         }
+         to {
+            background-position-x: -500px;
+         }
+      }
+   }
+   &__panki {
+      width: 118.333px;
+      height: 118.333px;
+      background-image: url('http://i.imgur.com/MbT28qN.png');
+      animation: playX 1s steps(6) infinite, playY 3s steps(3) infinite;
+      position: absolute;
+      @keyframes playX {
+         from {
+            background-position-x: 0px;
+         }
+         to {
+            background-position-x: -710px;
+         }
+      }
+      @keyframes playY {
+         from {
+            background-position-y: 0px;
+         }
+         to {
+            background-position-y: -355px;
+         }
+      }
+   }
 }

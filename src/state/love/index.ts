@@ -1,10 +1,10 @@
-const initialState: LoveState = {};
+const initialState: LoveState = {}
 
 const loveReducer = (state: LoveState = initialState, action: Action) => {
   if (typeof state === 'undefined') {
-    return initialState;
+    return initialState
   }
-  return state;
-};
+  return state
+}
 
-export default loveReducer;
+export default loveReducer
