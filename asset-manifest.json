@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/my-love/static/css/main.865a188d.chunk.css",
+    "main.js": "/my-love/static/js/main.9ef80867.chunk.js",
+    "main.js.map": "/my-love/static/js/main.9ef80867.chunk.js.map",
+    "runtime-main.js": "/my-love/static/js/runtime-main.869e33df.js",
+    "runtime-main.js.map": "/my-love/static/js/runtime-main.869e33df.js.map",
+    "static/js/2.b2635b10.chunk.js": "/my-love/static/js/2.b2635b10.chunk.js",
+    "static/js/2.b2635b10.chunk.js.map": "/my-love/static/js/2.b2635b10.chunk.js.map",
+    "index.html": "/my-love/index.html",
+    "precache-manifest.33d7f75c83e700a4a28e47da949fd8ff.js": "/my-love/precache-manifest.33d7f75c83e700a4a28e47da949fd8ff.js",
+    "service-worker.js": "/my-love/service-worker.js",
+    "static/css/main.865a188d.chunk.css.map": "/my-love/static/css/main.865a188d.chunk.css.map",
+    "static/js/2.b2635b10.chunk.js.LICENSE.txt": "/my-love/static/js/2.b2635b10.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/my-love/static/media/Roboto-Bold.e07df86c.ttf",
+    "static/media/ballon-couple.gif": "/my-love/static/media/ballon-couple.92f3b88e.gif",
+    "static/media/butterfly.webm": "/my-love/static/media/butterfly.c2f8bdeb.webm",
+    "static/media/heart-stamp.png": "/my-love/static/media/heart-stamp.b4525ec3.png",
+    "static/media/stamp.webp": "/my-love/static/media/stamp.4b33a72b.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.869e33df.js",
+    "static/js/2.b2635b10.chunk.js",
+    "static/css/main.865a188d.chunk.css",
+    "static/js/main.9ef80867.chunk.js"
+  ]
+}
