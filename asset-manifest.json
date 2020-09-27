@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-love/static/css/main.90e7a7d6.chunk.css",
+    "main.css": "/my-love/static/css/main.a3edf7bc.chunk.css",
     "main.js": "/my-love/static/js/main.791e5664.chunk.js",
     "main.js.map": "/my-love/static/js/main.791e5664.chunk.js.map",
     "runtime-main.js": "/my-love/static/js/runtime-main.869e33df.js",
@@ -8,9 +8,9 @@
     "static/js/2.7dee4f93.chunk.js": "/my-love/static/js/2.7dee4f93.chunk.js",
     "static/js/2.7dee4f93.chunk.js.map": "/my-love/static/js/2.7dee4f93.chunk.js.map",
     "index.html": "/my-love/index.html",
-    "precache-manifest.7768e5a0dc75f2a90dd4d9cae425c4b6.js": "/my-love/precache-manifest.7768e5a0dc75f2a90dd4d9cae425c4b6.js",
+    "precache-manifest.d305edff9bfb5a3f6c347f35cd0fc0cc.js": "/my-love/precache-manifest.d305edff9bfb5a3f6c347f35cd0fc0cc.js",
     "service-worker.js": "/my-love/service-worker.js",
-    "static/css/main.90e7a7d6.chunk.css.map": "/my-love/static/css/main.90e7a7d6.chunk.css.map",
+    "static/css/main.a3edf7bc.chunk.css.map": "/my-love/static/css/main.a3edf7bc.chunk.css.map",
     "static/js/2.7dee4f93.chunk.js.LICENSE.txt": "/my-love/static/js/2.7dee4f93.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/my-love/static/media/Roboto-Bold.e07df86c.ttf",
     "static/media/ballon-couple.gif": "/my-love/static/media/ballon-couple.92f3b88e.gif",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.869e33df.js",
     "static/js/2.7dee4f93.chunk.js",
-    "static/css/main.90e7a7d6.chunk.css",
+    "static/css/main.a3edf7bc.chunk.css",
     "static/js/main.791e5664.chunk.js"
   ]
 }
